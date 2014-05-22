@@ -4,7 +4,7 @@ apply plugin: 'war'
 def springVersion = '4.0.4.RELEASE'
 
 sourceCompatibility = 1.8
-version = '1.0'
+version = '0.1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -12,6 +12,11 @@ repositories {
 
 dependencies {
     providedCompile group: 'javax.servlet', name:'servlet-api', version: '2.5'
+
+    // JSON-LD java integration dependencies
+    compile group: 'com.github.jsonld-java', name: 'jsonld-java', version: '0.4.1'
+
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.12.6'
 
     // Spring dependencies
     compile group: 'org.springframework', name: 'spring-core', version: springVersion
