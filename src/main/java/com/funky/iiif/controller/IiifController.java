@@ -1,6 +1,8 @@
 package com.funky.iiif.controller;
 
-import com.funky.iiif.IIIF;
+import com.funky.iiif.Quality;
+import com.funky.iiif.Region;
+import com.funky.iiif.Size;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +37,7 @@ public class IiifController {
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
     @ResponseBody
     public String getQuickImage(HttpServletRequest request, @PathVariable("id") String id) {
-        return getImage(request, id, IIIF.Region.FULL, IIIF.Size.FULL, "0", IIIF.Quality.NATIVE);
+        return getImage(request, id, Region.FULL.getString(), Size.FULL.getString(), "0", Quality.NATIVE.getString());
     }
     /**
      * Get metadata for an image in JSON-LD format.
