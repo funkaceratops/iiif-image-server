@@ -1,7 +1,7 @@
 iiif-image-server
 =================
 
-Image server implementing [IIIF specification](http://iiif.io/api/image/1.1/].
+Image server implementing [IIIF specification](http://iiif.io/api/image/1.1/).
 
 
 ##Resources
